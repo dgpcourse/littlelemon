@@ -1,0 +1,290 @@
+/* _____________________________________________________________________________________________________________________
+    File: styles.scss
+    Date: 25/02/2026
+    Author: Lic. Daniel Parrilla
+_____________________________________________________________________________________________________________________ */
+/* __________ General __________ */
+:root {
+  --gr1-dark: hsl(160, 22%, 16%);
+  --gr1-medium: hsl(160, 22%, 27%);
+  --gr1-light: hsl(160, 22%, 87%);
+  --gr2-dark: hsl(42, 100%, 64%);
+  --gr2-light: hsl(42, 100%, 86%);
+  --gr2-xxlight: hsl(41, 100%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --black-opacity: hsla(0, 0%, 0%, 0.25);
+  --txt-Shadow1: 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.75);
+  --txt-Shadow2: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.75);
+  --box-shadow1: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/WorkSans.ttf");
+}
+@font-face {
+  font-family: WorkSansItalic;
+  src: url("../fonts/WorkSans-Italic.ttf");
+}
+@font-face {
+  font-family: JosefinSans;
+  src: url("../fonts/JosefinSans.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.disable {
+  color: var(--gr1-medium);
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 120rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  color: var(--gr1-dark);
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ Header __________ */
+.header {
+  background-color: var(--gr1-light);
+}
+.header__container {
+  text-align: center;
+  font-family: JosefinSans, sans-serif;
+}
+.header__h1 {
+  margin-top: -3rem;
+  font-size: 5rem;
+  color: var(--gr1-medium);
+  text-shadow: var(--txt-Shadow1);
+}
+.header__h2 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+.header__img {
+  display: block;
+  padding: 1.2rem;
+  width: 24rem;
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ Nav __________ */
+.nav {
+  background-color: var(--gr1-medium);
+}
+.nav__ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 2rem 0;
+  list-style: none;
+}
+.nav__a {
+  display: block;
+  font-family: WorkSans, sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--gr2-dark);
+  text-shadow: var(--txt-Shadow1);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.nav__a:hover {
+  transform: scale(1.1);
+  color: var(--gr2-light);
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ Main __________ */
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  background: var(--gr1-dark);
+  color: var(--gr2-dark);
+  padding: 0.8rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.main__promo {
+  background: var(--gr1-dark) url("../images/restaurant.jpg") center center;
+  background-size: cover;
+  text-align: center;
+  color: var(--white);
+  height: 100%;
+}
+.main__h3 {
+  padding: 3.2rem 0 5.6rem;
+  font-family: JosefinSans, sans-serif;
+  font-size: 4rem;
+  text-shadow: var(--txt-Shadow2);
+}
+.main__p-primary {
+  padding: 0 2.4rem 3.2rem;
+  font-family: WorkSansItalic, sans-serif;
+  font-size: 1.4rem;
+  text-shadow: var(--txt-Shadow1);
+  color: var(--gr2-xxlight);
+  background-color: var(--black-opacity);
+}
+.main__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 3.2rem 2.4rem;
+  text-align: center;
+  color: var(--gr1-dark);
+  background-color: var(--gr2-xxlight);
+}
+.main__card {
+  padding: 3.2rem 2.4rem;
+  background-color: var(--gr2-light);
+  box-shadow: var(--box-shadow1);
+  border-radius: 1.2rem;
+}
+.main__h4 {
+  font-family: JosefinSans, sans-serif;
+  font-size: 2.8rem;
+}
+.main__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 2.4rem 0;
+}
+.main__ul {
+  padding: 1.6rem 0;
+  list-style: none;
+  font-family: WorkSansItalic, sans-serif;
+}
+.main__a {
+  display: block;
+  margin-top: 1.6rem;
+  font-family: WorkSansItalic, sans-serif;
+  text-align: left;
+  color: inherit;
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ Gallery __________ */
+.gallery, .book {
+  background-color: var(--gr2-xxlight);
+  padding-bottom: 3.2rem;
+}
+.gallery__h3, .book__h3 {
+  padding: 3.2rem 0 2.4rem;
+  font-family: JosefinSans, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--gr1-medium);
+  text-shadow: var(--txt-Shadow1);
+}
+.gallery__container, .book__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.gallery__container img:nth-child(odd):hover, .book__container img:nth-child(odd):hover {
+  transform: scale(1.05) rotate(5deg);
+}
+.gallery__container img:nth-child(even):hover, .book__container img:nth-child(even):hover {
+  transform: scale(1.05) rotate(-5deg);
+}
+.gallery__img, .book__img {
+  display: block;
+  max-width: 35rem;
+  border: 0.2rem double var(--gr1-medium);
+  border-radius: 0.8rem;
+  transition: transform 0.5s ease-in-out;
+}
+.gallery, .book {
+  /* __________________________________________________________________________________________________________________ */
+  /* __________ Book __________ */
+}
+.gallery__form, .book__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.gallery__label, .book__label {
+  padding-bottom: 0.4rem;
+}
+.gallery__input, .gallery__textarea, .book__input, .book__textarea {
+  display: block;
+  width: 30rem;
+  padding: 0.4rem;
+}
+.gallery__textarea, .book__textarea {
+  height: 5.6rem;
+}
+.gallery__submit, .book__submit {
+  padding: 0.8rem 2.4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gr2-dark);
+  background-color: var(--gr1-medium);
+  border-radius: 0.8rem;
+  box-shadow: var(--box-shadow1);
+  cursor: pointer;
+}
+.gallery__submit:hover, .book__submit:hover {
+  color: var(--gr1-medium);
+  background-color: var(--gr2-dark);
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ footer __________ */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 3.2rem;
+  background-color: var(--gr1-light);
+}
+.footer__a {
+  color: var(--gr1-dark);
+}
+.footer__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.8rem;
+}
+.footer__img {
+  display: block;
+  width: 5rem;
+}
+.footer__small {
+  display: block;
+}
+
+/* __________________________________________________________________________________________________________________ */
+/* __________ @media __________ */
+@media screen and (min-width: 900px) {
+  .main__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--______________________________________________________________________________________________________
+    File: gallery.html
+    Description: 
+    Date: 4/3/2026
+    Author: Lic. Daniel Parrilla
+    _______________________________________________________________________________________________________-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on
+		traditional recipes served with a modern twist">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="Daniel Parrilla">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./css_min/styles.min.css" rel="stylesheet">
+	<link href="./images/Asset%209@4x.png" rel="icon" type="image/png">
+	<title>Little Lemon</title>
+</head>
+<body>
+<!--_______________________________________________________________________________________________________-->
+<!--__________ Skip to Main Content __________-->
+<a href="#main" class="skip-link">Skip to Main Content</a>
+
+<!--__________ Header __________-->
+<header class="header">
+	<div class="header__container">
+		<a href="index.html">
+			<img class="header__img" src="./images/Asset%2016@4x.png" alt="Logo Little Lemon">
+		</a>
+		<h1 class="header__h1">Little Lemon</h1>
+		<h2 class="header__p">Resto - Bar</h2>
+	</div>
+
+	<!--_______________________________________________________________________________________________________-->
+	<!--__________ Nav __________-->
+	<nav class="nav" aria-label="Main navigation">
+		<ul class="nav__ul">
+			<li><a class="nav__a" href="index.html">Home</a></li>
+			<li><a class="nav__a disable" href="#">Menu</a></li>
+			<li><a class="nav__a" href="#">Book</a></li>
+			<li><a class="nav__a" href="gallery.html">Gallery</a></li>
+			<li><a class="nav__a disable" href="#">About Us</a></li>
+		</ul>
+	</nav>
+</header>
+
+<!--_______________________________________________________________________________________________________-->
+<!--__________ Main __________-->
+<main class="book" id="main">
+	<h3 class="book__h3">Book a Table</h3>
+	<form class="book__form" action="#" method="post">
+		<label class="book__label" for="fullName">Full name:
+			<input class="book__input" type="text" name="fullName" id="fullName">
+		</label>
+		<label class="book__label" for="phone">Phone Number:
+			<input class="book__input" type="tel" name="phone" id="phone" required>
+		</label>
+		<label class="book__label" for="email">E-Mail:
+			<input class="book__input" type="email" name="email" id="email" required>
+		</label>
+		<label class="book__label" for="date">Date of reservation:
+			<input class="book__input" type="datetime-local" name="date" id="date" required>
+		</label>
+		<label class="book__label" for="time">Time of reservation (hs):
+			<input class="book__input" type="number" name="time" id="time" required min="1" max="5" value="2">
+		</label>
+		<label class="book__label" for="guest">Guests:
+			<input class="book__input" type="number" name="guest" id="guest" required min="1" max="12"
+					value="4">
+		</label>
+		<label class="book__label" for="requests">Special requests:
+			<textarea class="book__textarea" name="requests" id="requests"></textarea>
+		</label>
+		<button class="book__submit" type="submit">Send the Book</button>
+	</form>
+</main>
+
+<!--_______________________________________________________________________________________________________-->
+<!--__________ Footer __________-->
+<footer class="footer">
+	<address>
+		<p>Little Lemon</p>
+		<p>123 Main Street</p>
+		<p>New York, NY 10001</p>
+		<p><a class="footer__a" href="mailto:info@littlelemon.com.xxx">info@dpresto.com.xxx</a></p>
+		<p><a class="footer__a" href="tel:+12125551234">+1 (212) 555-1234</a></p>
+	</address>
+	<figure class="footer__figure">
+		<img class="footer__img" src="./images/Asset%2020@4x.png" alt="Logo Little Lemon">
+		<small class="footer__small">Copyright 2026 by Daniel Parrilla</small>
+	</figure>
+</footer>
+</body>
+</html>
